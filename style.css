@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background: linear-gradient(to right, green, #00bf89);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.left-text {
+  flex-basis: 30%;
+  text-align: center;
+}
+.heading {
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.heading span {
+  color: darkgreen;
+}
+.sub-tital {
+  font: 1em sans-serif;
+  font-size: 20px;
+}
+.left-text:hover {
+  box-shadow: 0 0 6px yellow;
+  border-radius: 4%;
+}
+.gallery {
+  flex-basis: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 130px;
+  gap: 6px;
+}
+.box:hover {
+  background-position: center;
+  background-blend-mode: normal;
+  box-shadow: 0 0 5px white;
+  cursor: pointer;
+  font-size: 0;
+}
+.box {
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 40, 40);
+  background-blend-mode: soft-light;
+  transition: all 1s ease-in-out;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+.row-2 {
+  grid-row: span 2;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    color: black;
+    background: linear-gradient(to right, green, white, #00bf89);
+  }
+  .gallery {
+    width: 100%;
+    color: #00bf89;
+    grid-auto-rows: 250px;
+  }
+  .box {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+  .sub-tital {
+    font-size: 15px;
+  }
+}
